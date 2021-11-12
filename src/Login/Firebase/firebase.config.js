@@ -8,9 +8,3 @@ const firebaseConfig = {
 }
   export default firebaseConfig;
 
-//   apiKey: "AIzaSyDpqYQj192b3iQQL_5Zy3NwFEmjLo42DVE",
-//   authDomain: "time-travel-watch-zone.firebaseapp.com",
-//   projectId: "time-travel-watch-zone",
-//   storageBucket: "time-travel-watch-zone.appspot.com",
-//   messagingSenderId: "613319998231",
-//   appId: "1:613319998231:web:83b15f16385000bd285552"
