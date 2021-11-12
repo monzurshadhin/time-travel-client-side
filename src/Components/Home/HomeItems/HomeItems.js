@@ -41,7 +41,7 @@ const HomeItems = () => {
                     <b>{watch.name}</b>
                   </Card.Title>
   
-                  <Card.Text>{watch.description}</Card.Text>
+                  <Card.Text>{watch.description.slice(0, 120)}</Card.Text>
                 </Card.Body>
   
                 <div className="watch-bottom d-flex justify-content-between m-4 align-items-center">

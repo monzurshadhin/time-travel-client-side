@@ -68,7 +68,7 @@ const ManageAllProducts = () => {
                       <b>{watch.name}</b>
                     </Card.Title>
   
-                    <Card.Text>{watch.description}</Card.Text>
+                    <Card.Text>{watch.description.slice(0, 115)}</Card.Text>
                     </div>
                     <button
                       onClick={() => handleCancel(watch._id)}
