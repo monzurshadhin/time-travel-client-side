@@ -6,7 +6,8 @@ import useWatches from "../../../Hooks/useWatches";
 import img1 from '../../../images/undraw_add_information_j2wg.svg';
 
 const AddProduct = () => {
-  const { watches } = useWatches();
+  const { allWatches } = useWatches();
+  
   const notify = () => toast("Watch Added successfully!");
   const {
     register,
@@ -17,7 +18,7 @@ const AddProduct = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    data.nId = watches.length + 1;
+    data.nId = allWatches.length + 1;
     // send new added watches data to database
     fetch("https://protected-falls-97350.herokuapp.com/watches", {
       method: "POST",
