@@ -66,6 +66,7 @@ const MyOrders = () => {
                 </Card.Title>
 
                 <Card.Text><b>Order by:</b> {order.userName}</Card.Text>
+                <Card.Text><b>Email:</b> {order.email}</Card.Text>
                 <Card.Text><b>Status: <span className={order.status==='pending'?'pending-color':'approved-color'}>{order.status}</span></b></Card.Text>
                 <button
                   onClick={() => handleCancel(order._id)}
