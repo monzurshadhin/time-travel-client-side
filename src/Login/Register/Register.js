@@ -26,6 +26,7 @@ const Register = () => {
   const location = useLocation();
   const history = useHistory();
   const redirect_uri = location.state?.from || "/home";
+  const redirect_uri1 = location.state?.from || "/dashboard";
   // handle google login
   const handleGoogleLogin = () => {
     signInUsingGoogle()
@@ -35,7 +36,7 @@ const Register = () => {
         saveUser(result.user.email, result.user.displayName, "PUT");
         setMessage("Login Successful");
         setError("");
-        history.push(redirect_uri);
+        history.push(redirect_uri1);
       })
       .catch((error) => {
         setMessage("");
