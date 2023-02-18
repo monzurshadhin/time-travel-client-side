@@ -11,7 +11,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         const data = { email: user.email };
-        fetch("https://protected-falls-97350.herokuapp.com/myOrders", {
+        fetch("https://time-travel-server.vercel.app/myOrders", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -26,7 +26,7 @@ const MyOrders = () => {
     const handleCancel = (id) =>{
         const proceed = window.confirm("are you sure to cancel?");
         if (proceed) {
-            const url = `https://protected-falls-97350.herokuapp.com/order/delete/${id}`;
+            const url = `https://time-travel-server.vercel.app/order/delete/${id}`;
             fetch(url, {
               method: "DELETE",
             })

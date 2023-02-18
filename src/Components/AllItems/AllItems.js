@@ -6,8 +6,10 @@ import Footer from "../Shared/Footer/Footer";
 import Header from "../Shared/Header/Header";
 
 const AllItems = () => {
+  
   const { allWatches, isLoading } = useWatches();
   const history = useHistory();
+  console.log(allWatches);
 
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = () => {

@@ -7,7 +7,7 @@ const useWatches = () =>{
     const [isLoading,setIsLoading] = useState(true);
     
     useEffect(() => {
-        fetch("https://protected-falls-97350.herokuapp.com/limitedWatches")
+        fetch("https://time-travel-server.vercel.app/limitedWatches")
           .then((res) => res.json())
           .then((data) => {
             setWatches(data);
@@ -15,7 +15,7 @@ const useWatches = () =>{
           });
       }, []);
     useEffect(() => {
-        fetch("https://protected-falls-97350.herokuapp.com/watches")
+        fetch("https://time-travel-server.vercel.app/watches")
           .then((res) => res.json())
           .then((data) => {
             setAllWatches(data);
@@ -24,7 +24,7 @@ const useWatches = () =>{
       }, []);
 
       useEffect(() => {
-        fetch("https://protected-falls-97350.herokuapp.com/reviews")
+        fetch("https://time-travel-server.vercel.app/reviews")
           .then((res) => res.json())
           .then((data) => {
             setReviews(data);

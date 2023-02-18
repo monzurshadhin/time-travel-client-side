@@ -20,7 +20,7 @@ const AddProduct = () => {
   const onSubmit = (data) => {
     data.nId = allWatches.length + 1;
     // send new added watches data to database
-    fetch("https://protected-falls-97350.herokuapp.com/watches", {
+    fetch("https://time-travel-server.vercel.app/watches", {
       method: "POST",
       headers: {
         "content-type": "application/json",

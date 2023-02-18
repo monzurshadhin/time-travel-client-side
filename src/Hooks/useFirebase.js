@@ -105,7 +105,7 @@ const useFirebase = () => {
   useEffect(() => {
     setAdminRouteLoading(true)
     
-    fetch(`https://protected-falls-97350.herokuapp.com/users/${user.email}`)
+    fetch(`https://time-travel-server.vercel.app/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setAdmin(data.admin);
@@ -129,7 +129,7 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName, method) => {
     const user = { email: email, displayName: displayName };
-    fetch("https://protected-falls-97350.herokuapp.com/users", {
+    fetch("https://time-travel-server.vercel.app/users", {
       method: method,
       headers: {
         "content-type": "application/json",

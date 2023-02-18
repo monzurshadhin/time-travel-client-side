@@ -14,7 +14,7 @@ const ManageAllProducts = () => {
     const handleCancel = (id) =>{
         const proceed = window.confirm("are you sure to cancel?");
         if (proceed) {
-            const url = `https://protected-falls-97350.herokuapp.com/watches/delete/${id}`;
+            const url = `https://time-travel-server.vercel.app/watches/delete/${id}`;
             fetch(url, {
               method: "DELETE",
             })

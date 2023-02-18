@@ -19,7 +19,7 @@ const AddReview = () => {
   const onSubmit = (data) => {
     // console.log(data);
     // send new added review data to database
-    fetch("https://protected-falls-97350.herokuapp.com/review", {
+    fetch("https://time-travel-server.vercel.app/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

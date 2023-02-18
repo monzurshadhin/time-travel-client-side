@@ -16,7 +16,7 @@ const MakeAdmin = () => {
   const handleAdminSubmit = (e) => {
     // console.log(email);
     const user = { email };
-    fetch("https://protected-falls-97350.herokuapp.com/users/admin", {
+    fetch("https://time-travel-server.vercel.app/users/admin", {
       method: "PUT",
       headers: {
         authorization: `Bearer ${token}`,

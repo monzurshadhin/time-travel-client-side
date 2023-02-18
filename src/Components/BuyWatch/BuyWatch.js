@@ -26,7 +26,7 @@ const BuyWatch = () => {
     console.log(user);
     // get single data by id 
     useEffect(() => {
-      fetch(`https://protected-falls-97350.herokuapp.com/selectedWatch/${id}`)
+      fetch(`https://time-travel-server.vercel.app/selectedWatch/${id}`)
         .then((res) => res.json())
         .then((data) => setWatch(data));
     }, []);
@@ -39,7 +39,7 @@ const BuyWatch = () => {
     const onSubmit = (data) => {
       data.status = "pending";
       data.img = watch.img;
-      fetch("https://protected-falls-97350.herokuapp.com/purchase", {
+      fetch("https://time-travel-server.vercel.app/purchase", {
         method: "POST",
         headers: {
           "content-type": "application/json",
