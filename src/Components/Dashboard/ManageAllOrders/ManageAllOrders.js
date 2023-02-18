@@ -14,7 +14,7 @@ const ManageAllOrders = () => {
 
     useEffect(() => {
       
-        fetch("https://time-travel-server.vercel.app/orders")
+        fetch("http://localhost:5000/orders")
           .then((res) => res.json())
           .then((data) => {
             setAllOrders(data);
@@ -25,7 +25,7 @@ const ManageAllOrders = () => {
       }, [modifiedCount]);
 
       const handleStatus = (id) =>{
-        const url = `https://time-travel-server.vercel.app/order/update/${id}`;
+        const url = `http://localhost:5000/order/update/${id}`;
         const data = { status: 'shipped'};
         fetch(url, {
           method: "PUT",
@@ -44,7 +44,7 @@ const ManageAllOrders = () => {
     const handleCancel = (id) =>{
         const proceed = window.confirm("are you sure to cancel?");
         if (proceed) {
-            const url = `https://time-travel-server.vercel.app/order/delete/${id}`;
+            const url = `http://localhost:5000/order/delete/${id}`;
             fetch(url, {
               method: "DELETE",
             })

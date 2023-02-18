@@ -16,7 +16,7 @@ const MakeAdmin = () => {
   const handleAdminSubmit = (e) => {
     // console.log(email);
     const user = { email };
-    fetch("https://time-travel-server.vercel.app/users/admin", {
+    fetch("http://localhost:5000/users/admin", {
       method: "PUT",
       headers: {
         authorization: `Bearer ${token}`,

@@ -11,7 +11,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         const data = { email: user.email };
-        fetch("https://time-travel-server.vercel.app/myOrders", {
+        fetch("http://localhost:5000/myOrders", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -26,7 +26,7 @@ const MyOrders = () => {
     const handleCancel = (id) =>{
         const proceed = window.confirm("are you sure to cancel?");
         if (proceed) {
-            const url = `https://time-travel-server.vercel.app/order/delete/${id}`;
+            const url = `http://localhost:5000/order/delete/${id}`;
             fetch(url, {
               method: "DELETE",
             })

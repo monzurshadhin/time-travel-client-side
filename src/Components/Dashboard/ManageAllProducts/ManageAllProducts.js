@@ -14,7 +14,7 @@ const ManageAllProducts = () => {
     const handleCancel = (id) =>{
         const proceed = window.confirm("are you sure to cancel?");
         if (proceed) {
-            const url = `https://time-travel-server.vercel.app/watches/delete/${id}`;
+            const url = `http://localhost:5000/watches/delete/${id}`;
             fetch(url, {
               method: "DELETE",
             })

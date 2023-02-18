@@ -26,7 +26,7 @@ const BuyWatch = () => {
     console.log(user);
     // get single data by id 
     useEffect(() => {
-      fetch(`https://time-travel-server.vercel.app/selectedWatch/${id}`)
+      fetch(`http://localhost:5000/selectedWatch/${id}`)
         .then((res) => res.json())
         .then((data) => setWatch(data));
     }, []);
@@ -39,7 +39,7 @@ const BuyWatch = () => {
     const onSubmit = (data) => {
       data.status = "pending";
       data.img = watch.img;
-      fetch("https://time-travel-server.vercel.app/purchase", {
+      fetch("http://localhost:5000/purchase", {
         method: "POST",
         headers: {
           "content-type": "application/json",

@@ -20,7 +20,7 @@ const AddProduct = () => {
   const onSubmit = (data) => {
     data.nId = allWatches.length + 1;
     // send new added watches data to database
-    fetch("https://time-travel-server.vercel.app/watches", {
+    fetch("http://localhost:5000/watches", {
       method: "POST",
       headers: {
         "content-type": "application/json",

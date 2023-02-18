@@ -7,7 +7,7 @@ const useWatches = () =>{
     const [isLoading,setIsLoading] = useState(true);
     
     useEffect(() => {
-        fetch("https://time-travel-server.vercel.app/limitedWatches")
+        fetch("http://localhost:5000/limitedWatches")
           .then((res) => res.json())
           .then((data) => {
             setWatches(data);
@@ -15,7 +15,7 @@ const useWatches = () =>{
           });
       }, []);
     useEffect(() => {
-        fetch("https://time-travel-server.vercel.app/watches")
+        fetch("http://localhost:5000/watches")
           .then((res) => res.json())
           .then((data) => {
             setAllWatches(data);
@@ -24,7 +24,7 @@ const useWatches = () =>{
       }, []);
 
       useEffect(() => {
-        fetch("https://time-travel-server.vercel.app/reviews")
+        fetch("http://localhost:5000/reviews")
           .then((res) => res.json())
           .then((data) => {
             setReviews(data);

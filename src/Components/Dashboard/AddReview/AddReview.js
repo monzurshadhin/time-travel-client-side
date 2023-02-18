@@ -19,7 +19,7 @@ const AddReview = () => {
   const onSubmit = (data) => {
     // console.log(data);
     // send new added review data to database
-    fetch("https://time-travel-server.vercel.app/review", {
+    fetch("http://localhost:5000/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
